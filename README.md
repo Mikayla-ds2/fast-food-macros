@@ -1,0 +1,1 @@
+This project explores the macronutrient breakdown of popular foods itmes from 5 major fast food chains. Using a custom dataset of 10 itmes per restaurant, we'll analyze and visualize the nutritional profiles of these foods. The goal is to understand how different menu items compare across restaurants and how users can assemble meals based on dietary goals. 

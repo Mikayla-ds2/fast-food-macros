@@ -1,6 +1,6 @@
 <script>    
     export let data;
-    const { item } = data;
+    const { item, similarItems } = data;
 
     import Radarchart from '$lib/radarchart.svelte';
     
@@ -72,6 +72,21 @@
         {:else}
           <p>Chart data not ready. RadarData: {JSON.stringify(radarData)}</p>
         {/if}
+
+        {#if similarItems.length}
+        <section class="similar-items">
+          <h2>See Similar Items</h2>
+          <div class="item-grid">
+            {#each similarItems as sim}
+            <a href={`/explore/${sim.id}`} class="item-card" rel="prefetch">
+              <h3>{sim.item_name}</h3>
+              <p>From {sim.restaurant_name}</p>
+              <p>Similarity: {(sim.similarity * 100).toFixed(2)}%</p>
+            </a>
+          {/each}
+        </div>
+      </section>
+    {/if}
         
         <a href="/explore" class='back-link'>← Back to Explore</a>
       {:else}
@@ -108,5 +123,23 @@
     
     .back-link:hover {
       text-decoration: underline;
+    }
+    .similar-items {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+    }
+    .item-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .item-card {
+      background: #ffe8f0;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
     }
     </style>

@@ -2,7 +2,6 @@
     import fastfoodData from '$lib/fastfood.json';
 
     let items = fastfoodData;
-    console.log ("✅ Loaded items:", items);
 </script>
 
 <main class="explore">
@@ -12,8 +11,8 @@
     <!-- Placeholder for future interactive data  -->
      <section class="item-grid">
         {#each items as item}
-        <div class="item-card">
-            <h2><a href={`/explore/${item.id}`}>{item.item_name}</a></h2>
+        <a href={`/explore/${item.id}`} class="item-card">
+            <h2>{item.item_name}</h2>
             <p>Restaurant: {item.restaurant_name}</p>
             <p>Calories: {item.calories}</p>
             <p>Protein: {item.protein} grams</p>
@@ -24,7 +23,7 @@
             <p>Price: {item.price} dollars</p>
             <p>Carbs: {item.carbs} grams</p>
             <p>Fiber: {item.fiber} grams</p>
-        </div>
+        </a>
         {/each}
      </section>
 </main>
@@ -52,11 +51,14 @@
 
     }
     .item-card {
+        display: block;
         background-color: #fff0f6;
         border-radius: 1rem;
         padding: 1rem;
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         transition: transform 0.2s ease;
+        text-decoration: none;
+        color: inherit;
     }
     .item-card {
         background-color: #fff0f6;
@@ -66,6 +68,7 @@
         transition: transform 0.2s ease;
     }
     .item-card:hover {
+        cursor: pointer;
         transform: scale(1.02);
     }
     .item-card h2 {
@@ -82,5 +85,9 @@
     }
     .item-card h2 a:hover {
         text-decoration: underline;
+    }
+    .item-link {
+        text-decoration: none;
+        color: inherit;
     }
 </style>

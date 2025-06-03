@@ -1,4 +1,4 @@
-<script>
+<script context="module">
     import fastfoodData from '$lib/fastfood_with_ids.json';
 
     /** @ type {import('./$types').PageLoad}  */
@@ -59,8 +59,5 @@
         text-decoration: none;
         color: #d63384;
         font-weight: bold;  
-    }
-    .bank-link:hover {
-        text-decoration: underline;
     }
 </style>

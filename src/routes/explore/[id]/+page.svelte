@@ -65,9 +65,10 @@
         
         <!-- Only render chart if radarData exists and is valid -->
         {#if radarData && radarData.datasets && radarData.datasets[0]}
-          <div>
+          <details>
+            <summary>View Nutrition Radar Chart</summary>
             <Radarchart {radarData} title={`Nutrition Profile for ${item.item_name}`} />
-          </div>
+          </details>
         {:else}
           <p>Chart data not ready. RadarData: {JSON.stringify(radarData)}</p>
         {/if}

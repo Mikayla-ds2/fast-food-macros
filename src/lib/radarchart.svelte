@@ -61,9 +61,9 @@
       return lines;
     }
     
-    $: centerX = 150;
-    $: centerY = 150;
-    $: maxRadius = 120;
+    $: centerX = 250;
+    $: centerY = 250;
+    $: maxRadius = 160;
     $: radarPoints = radarData ? createRadarPoints(radarData, centerX, centerY, maxRadius) : [];
     $: gridLines = createGridLines(centerX, centerY, maxRadius);
     $: axisLines = createAxisLines(centerX, centerY, maxRadius);
@@ -77,7 +77,7 @@
       <h3>{title}</h3>
       
       {#if radarData && radarData.datasets && radarData.datasets[0]}
-        <svg width="300" height="320" viewBox="0 0 300 320">
+        <svg width="500" height="500" viewBox="0 0 500 500">
           <!-- Grid lines -->
           {#each gridLines as gridLine, i}
             <polygon 
@@ -123,8 +123,8 @@
           <!-- Labels -->
           {#each radarPoints as point, i}
             <text 
-              x={point.x + (point.x > centerX ? 10 : point.x < centerX ? -10 : 0)} 
-              y={point.y + (point.y > centerY ? 15 : point.y < centerY ? -5 : 0)} 
+              x={point.x + (point.x > centerX ? 14 : point.x < centerX ? -14 : 0)} 
+              y={point.y + (point.y > centerY ? 17 : point.y < centerY ? -7 : 0)} 
               text-anchor={point.x > centerX ? 'start' : point.x < centerX ? 'end' : 'middle'}
               font-size="12" 
               fill="#333"

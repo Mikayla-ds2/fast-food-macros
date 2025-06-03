@@ -12,7 +12,7 @@
     <!-- Placeholder for future interactive data  -->
      <section class="item-grid">
         {#each items as item}
-        <a href={`/explore/${item.id}`} class="item-link" rel="prefetch">
+        <a href={`/explore/${item.id}`} class="item-card" rel="prefetch">
             <h2>{item.item_name}</h2>
             <p>Restaurant: {item.restaurant_name}</p>
             <p>Calories: {item.calories}</p>
@@ -61,13 +61,6 @@
         text-decoration: none;
         color: inherit;
     }
-    .item-card {
-        background-color: #fff0f6;
-        border-radius: 1rem;
-        padding: 1rem;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        transition: transform 0.2s ease;
-    }
     .item-card:hover {
         cursor: pointer;
         transform: scale(1.02);
@@ -79,10 +72,6 @@
     .item-card p {
         margin: 0.25rem 0;
         font-size: 0.95rem;
-    }
-    .item-card h2 a {
-        text-decoration: none;
-        color: #d63384;
     }
     .item-card h2 a:hover {
         text-decoration: underline;

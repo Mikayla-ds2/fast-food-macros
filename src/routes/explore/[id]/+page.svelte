@@ -1,24 +1,7 @@
-<script context="module">
-    import fastfoodData from '$lib/fastfood_with_ids.json';
-
-    /** @ type {import('./$types').PageLoad}  */
-    export function load({ params }) {
-        const item = fastfoodData.find((i) => i.id === params.id);
-        if (!item) {
-            return {
-                status: 404,
-                error: new Error('Item not found'),
-            };
-        }
-        return {
-            props: { item }
-        };
-    }
-</script>
-
 <script>
-    export let item;
-    console.log("Loaded item:", item)    
+    export let data;
+    const { item } = data;
+    console.log('✅ Loaded items:', item);
 </script>
 
 <main class="item-detail">
@@ -34,7 +17,7 @@
     <p><strong>Carbs: </strong> {item.carbs} grams</p>
     <p><strong>Fiber:</strong> {item.fiber} grams</p>
 
-    <a href="/explore" class='back-link'> Back to Explore</a>
+    <a href="/explore" class='back-link'>← Back to Explore</a>
 </main>
 
 <style>
@@ -59,5 +42,8 @@
         text-decoration: none;
         color: #d63384;
         font-weight: bold;  
+    }
+    .back-link:hover {
+        text-decoration: underline;
     }
 </style>

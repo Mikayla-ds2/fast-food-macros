@@ -1,7 +1,31 @@
 <script>
-    export let data;
-    const { item } = data;
-    console.log('✅ Loaded items:', item);
+    import Radarchart from '$lib/radarchart.svelte';
+    
+    export let item;
+
+    const radarData = {
+        labels: [
+            "Protein", "Fiber", 'Calories', 'Fats', 'Sodium', 'Cholesterol', 'Price', 'Carbs'],
+            datasets: [
+                {
+                    label: item?.item_name || "N/A",
+                    data: [
+                        item?.protein_score,
+                        item?.fiber_score,
+                        item?.calories_score,
+                        item?.fats_score,
+                        item?.sodium_score,
+                        item?.cholesterol_score,
+                        item?.carbs_score
+                    ],
+                    backgroundColor: "rgba(255,99,132,0.4)",
+                    borderColor: "rgba(255,99,132,1)",
+                    borderWidth: 1
+                }
+            ]
+    };
+
+    console.log('✅ Loaded item:', item);
 </script>
 
 <main class="item-detail">
@@ -17,8 +41,39 @@
     <p><strong>Carbs: </strong> {item.carbs} grams</p>
     <p><strong>Fiber:</strong> {item.fiber} grams</p>
 
+    <RadarChart {radarData} title={`Nutrition Profile for ${item.item_name}`} />
+
     <a href="/explore" class='back-link'>← Back to Explore</a>
 </main>
+
+    <!--
+    <RadarChart 
+        data={{
+            labels: [
+            "Protein", "Fiber", 'Calories', 'Fats', 'Sodium', 'Cholesterol', 'Price', 'Carbs'],
+            datasets: [
+                {
+                    label: item.item_name,
+                    data: [
+                    item.protein_score,
+                    item.fiber_score,
+                    item.calories_score,
+                    item.fats_score,
+                    item.sodium_score,
+                    item.cholesterol_score,
+                    item.price_score,
+                    item.carbs_score
+                    ],
+                    backgroundColor: "rgba(255,99,132,0.4)",
+                    borderColor: "rgba(255,99,132,1)",
+                    borderWidth: 1
+                }
+            ]
+        };
+            }
+    title="Nutrition Profile"
+    />
+-->
 
 <style>
     .item-detail {

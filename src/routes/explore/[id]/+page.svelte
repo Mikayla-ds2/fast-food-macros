@@ -1,5 +1,5 @@
 <script>
-    import fastfoodData from '$lib/fastfood.json';
+    import fastfoodData from '$lib/fastfood_with_ids.json';
 
     /** @ type {import('./$types').PageLoad}  */
     export function load({ params }) {
@@ -17,7 +17,8 @@
 </script>
 
 <script>
-    export let item;    
+    export let item;
+    console.log("Loaded item:", item)    
 </script>
 
 <main class="item-detail">
@@ -26,7 +27,7 @@
     <p><strong>Calories:</strong> {item.calories}</p>
     <p><strong>Protein:</strong> {item.protein} grams</p>
     <p><strong>Fats:</strong> {item.fats} grams</p>
-    <p><strong>Sodium:</strong> {items.sodium} milligrams</p>
+    <p><strong>Sodium:</strong> {item.sodium} milligrams</p>
     <p><strong>Sugars:</strong> {item.sugars} grams</p>
     <p><strong>Cholesterol:</strong> {item.cholesterol} milligrams</p>
     <p><strong>Price:</strong> {item.price} dollars</p>
@@ -52,7 +53,7 @@
         font-size: 1rem;
         margin-bottom: 0.5rem;
     }
-    .bank-link {
+    .back-link {
         display: inline-block;
         margin-top: 2rem;
         text-decoration: none;

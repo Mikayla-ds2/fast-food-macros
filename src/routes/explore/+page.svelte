@@ -1,5 +1,5 @@
 <script>
-    import fastfoodData from '$lib/fastfood.json';
+    import fastfoodData from '$lib/fastfood_with_ids.json';
 
     let items = fastfoodData;
 </script>
@@ -11,7 +11,7 @@
     <!-- Placeholder for future interactive data  -->
      <section class="item-grid">
         {#each items as item}
-        <a href={`/explore/${item.id}`} class="item-card">
+        <a href={`/explore/${item.id}`} class="item-link" rel="prefetch">
             <h2>{item.item_name}</h2>
             <p>Restaurant: {item.restaurant_name}</p>
             <p>Calories: {item.calories}</p>
@@ -89,5 +89,8 @@
     .item-link {
         text-decoration: none;
         color: inherit;
+    }
+    .item-link:hover {
+        text-decoration: underline;
     }
 </style>

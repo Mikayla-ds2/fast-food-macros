@@ -21,26 +21,56 @@
     function toggleGoal(goal) {
         if (selectedGoals.includes(goal)) {
             selectedGoals = selectedGoals.filter(g => g !== goal);
+        } else {
+            selectedGoals = [...selectedGoals, goal];
         }
     }
 
-    $: filteredItems = items.filter(item => {
+    function clearFilters() {
+        selectedType = '';
+        selectedRestaurant = '';
+        selectedGoals = [];
+    }
+
+    function calculateScore(item) {
+        let score = 0;
+        for (const goal of selectedGoals) {
+            switch (goal) {
+                case 'highProtein': if (item.protein >= 20) score += 1; break;
+                case 'lowFat': if (item.fats <= 23) score += 1; break;
+                case 'lowCarb': if (item.carbs <= 40) score += 1; break;
+                case 'highFat': if (item.fats >= 23) score += 1; break;
+                case 'highFiber': if (item.fiber >= 3) score += 1; break;
+                case 'lowSodium': if (item.sodium <= 1015) score += 1; break;
+                case 'lowPrice': if (item.price <= 6.60) score += 1; break;
+                case 'lowCalorie': if (item.calories <= 440) score += 1; break;
+            }
+        }
+        return score;
+    }
+
+    $: filteredItems = items
+    .filter(item => {
         const matchesType = selectedType ? item.item_type === selectedType : true;
         const matchesRestaurant = selectedRestaurant ? item.restaurant_name === selectedRestaurant : true;
-
         const meetsGoals = selectedGoals.every(goal => {
             switch (goal) {
                 case 'highProtein': return item.protein >= 20;
                 case 'lowFat': return item.fats <= 23;
                 case 'lowCarb': return item.carbs <= 40;
                 case 'highFat': return item.fats >= 23;
-                case 'highFiber': return item.fiber >
+                case 'highFiber': return item.fiber >= 3;
+                case 'lowSodium': return item.sodium <= 1015;
+                case 'lowPrice': return item.price <= 6.60;
+                case 'lowCalorie': return item.calories <= 440;
+                default: return true;
             }
-        }
+        });
+        return matchesType && matchesRestaurant && meetsGoals;
+    })
+    .map(item => ({ ...item, score: calculateScore(item) }))
+    .sort((a,b) => b.score - a.score);
 
-        )
-        return matchesType && matchesRestaurant;
-    });
     console.log("✅ Loaded items:", items);
 </script>
 
@@ -68,21 +98,32 @@
 
     <div class="goal-filters">
         <h3>Dietary Goals</h3>
+
+        <button on:click={clearFilters} class="clear-button">
+            Clear Filters
+        </button>
+
         {#each goalOptions as goal}
-        <button
+            <button
             class:selected={selectedGoals.includes(goal.value)}
             on:click={() => toggleGoal(goal.value)}
-        >    
-            {goal.label}
-        </button>
+            >
+                {goal.label}
+            </button>
         {/each}
     </div>
 
     <!-- Placeholder for future interactive data  -->
+     {#if filteredItems.length > 0}
      <section class="item-grid">
-        {#each filteredItems as item}
+        {#each filteredItems as item, i}
         <a href={`/explore/${item.id}`} class="item-card" rel="prefetch">
             <h2>{item.item_name}</h2>
+            <p><strong>Match:</strong>
+                {#if i === 0}⭐️ Best Match
+                {:else if i < 5}💪🏾 Great Option
+                {:else}👀 Consider This{/if}
+            </p>
             <p>Restaurant: {item.restaurant_name}</p>
             <p>Calories: {item.calories}</p>
             <p>Protein: {item.protein} grams</p>
@@ -96,6 +137,9 @@
         </a>
         {/each}
      </section>
+     {:else}
+        <p class="no-results">No results match your filters. Try adjusting your search.</p>
+    {/if}
 </main>
 
 <style>
@@ -142,14 +186,25 @@
         margin: 0.25rem 0;
         font-size: 0.95rem;
     }
-    .item-card h2 a:hover {
-        text-decoration: underline;
+    .no-results {
+        margin-top: 2rem;
+        font-size: 1rem;
+        color: #999;
+        font-style: italic;
     }
-    .item-link {
-        text-decoration: none;
-        color: inherit;
+    .selected {
+        background-color: #d63384;
+        color: white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        border: none;
     }
-    .item-link:hover {
-        text-decoration: underline;
+    .clear-button {
+        margin-bottom: 1rem;
+        background: #ffe5ec;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
     }
 </style>

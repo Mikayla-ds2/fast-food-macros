@@ -13,7 +13,7 @@
      <section class="item-grid">
         {#each items as item}
         <div class="item-card">
-            <h2>{item.item_name}</h2>
+            <h2><a href={`/explore/${item.id}`}>{item.item_name}</a></h2>
             <p>Restaurant: {item.restaurant_name}</p>
             <p>Calories: {item.calories}</p>
             <p>Protein: {item.protein} grams</p>
@@ -75,5 +75,12 @@
     .item-card p {
         margin: 0.25rem 0;
         font-size: 0.95rem;
+    }
+    .item-card h2 a {
+        text-decoration: none;
+        color: #d63384;
+    }
+    .item-card h2 a:hover {
+        text-decoration: underline;
     }
 </style>

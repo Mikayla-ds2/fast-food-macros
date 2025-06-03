@@ -2,6 +2,7 @@
     import fastfoodData from '$lib/fastfood_with_ids.json';
 
     let items = fastfoodData;
+    console.log("✅ Loaded items:", items);
 </script>
 
 <main class="explore">

@@ -1,23 +1,23 @@
-<script>
+<script>    
+    export let data;
+    const { item } = data;
+
     import Radarchart from '$lib/radarchart.svelte';
     
-    export let item;
-    
     // Add more debugging
-    console.log('Component initialized, item:', item);
     
     // Check if all required score fields exist
     $: if (item) {
-      console.log('Item scores:', {
-        protein_score: item.protein_score,
-        fiber_score: item.fiber_score,
-        calories_score: item.calories_score,
-        fats_score: item.fats_score,
-        sodium_score: item.sodium_score,
-        cholesterol_score: item.cholesterol_score,
-        price_score: item.price_score,
+      {
+        protein_score: item.protein_score;
+        fiber_score: item.fiber_score;
+        calories_score: item.calories_score;
+        fats_score: item.fats_score;
+        sodium_score: item.sodium_score;
+        cholesterol_score: item.cholesterol_score;
+        price_score: item.price_score;
         carbs_score: item.carbs_score
-      });
+      };
     }
     
     // Create radar data only when item exists and has required fields
@@ -48,9 +48,7 @@
       ]
     } : null;
     
-    $: console.log('RadarData created:', radarData);
-    </script>
-    
+    </script>    
     <main class="item-detail">
       {#if item}
         <h1>{item.item_name}</h1>
@@ -68,7 +66,6 @@
         <!-- Only render chart if radarData exists and is valid -->
         {#if radarData && radarData.datasets && radarData.datasets[0]}
           <div>
-            <h3>Debug: About to render chart</h3>
             <Radarchart {radarData} title={`Nutrition Profile for ${item.item_name}`} />
           </div>
         {:else}

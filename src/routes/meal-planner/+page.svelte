@@ -5,6 +5,7 @@
     const sideItems = fastfoodData.filter(item => item.item_type === 'Side'); 
     const drinkItems = fastfoodData.filter(item => item.item_type === 'Drink');
     const desertItems = fastfoodData.filter(item => item.item_type === 'Desert');
+    
 
     let selectedEntree = null;
     let selectedSide = null;

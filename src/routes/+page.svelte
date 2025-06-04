@@ -13,11 +13,6 @@
         </ul> 
     </section>
 
-    <nav class="buttons">
-        <a href="/explore" class="nav-btn"> Explore Meals</a>
-        <a href="/match" class="nav-btn"> Match Your Goal</a>
-        <a href="/about" class="nav-btn"> About Project</a>
-    </nav>
 </main>
 <style>
     :global(body) {
@@ -45,28 +40,6 @@
         margin: 0.75rem;
         font-size: 1.05rem;
     }
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .nav-btn {
-        background-color: #f7c5e0;
-        color:#2c2c2c;
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.75rem;
-        text-decoration: none;
-        font-weight:bold;
-        transition: background 0.3s ease;
-    }
-    .nav-btn:hover {
-        background-color: #f3b0d3;
-    }
-    @media (min-width: 600px) {
-        .buttons {
-            flex-direction: row;
-            justify-content: center;
-        }
-    }
+    
 </style>
 

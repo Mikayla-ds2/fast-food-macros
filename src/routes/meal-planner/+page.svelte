@@ -31,33 +31,33 @@
     <div class="planner-section">
         <h2>౨ৎentrée</h2>
         <select bind:value={selectedEntree}>
-            <option value={null}>select an entrée✿ʚɞ</option>
+            <option value={null}>select an entréeʚɞ</option>
             {#each entreeItems as item}
-                <option value={item}>{item.item_name}</option>
+                <option value={item}>{item.item_name.toLowerCase()}</option>
             {/each}
         </select>
 
         <h2>౨ৎside</h2>
         <select bind:value={selectedSide}>
-            <option value={null}>select a side✿ʚɞ</option>
+            <option value={null}>select a sideʚɞ</option>
             {#each sideItems as item}
-                <option value={item}>{item.item_name}</option>
+                <option value={item}>{item.item_name.toLowerCase()}</option>
             {/each}
         </select>
 
         <h2>౨ৎdrink</h2>
         <select bind:value={selectedDrink}>
-            <option value={null}>select a drink✿ʚɞ</option>
+            <option value={null}>select a drinkʚɞ</option>
             {#each drinkItems as item}
-                <option value={item}>{item.item_name}</option>
+                <option value={item}>{item.item_name.toLowerCase()}</option>
             {/each}
         </select>
 
         <h2>౨ৎdesert</h2>
         <select bind:value={selectedDesert}>
-            <option value={null}>selct a desert✿ʚɞ</option>
+            <option value={null}>selct a desertʚɞ</option>
             {#each desertItems as item}
-                <option value={item}>{item.item_name}</option>
+                <option value={item}>{item.item_name.toLowerCase()}</option>
             {/each}
         </select>
     </div>

@@ -2,7 +2,7 @@
 <nav class="navbar">
     <a href="/">「 ✦ home ✦ 」</a>
     <a href="/explore">「 ✦ explore ✦ 」</a>
-    <a href="/meal-planner">「 ✦ explore ✦ 」</a>
+    <a href="/meal-planner">「 ✦ meal planner ✦ 」</a>
     <a href="/about">「 ✦ about ✦ 」</a>
 </nav>
 

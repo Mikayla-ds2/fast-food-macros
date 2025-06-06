@@ -7,14 +7,14 @@
     let selectedGoals = [];
 
     const goalOptions = [
-        { label: "High Protein", value: 'highProtein' },
-        { label: 'Low Fat', value: 'lowFat' },
-        { label: 'Low Carb', value: 'lowCarb' },
-        { label: 'High Fat', value: 'highFat' },
-        { label: 'High Fiber', value: 'highFiber' },
-        { label: 'Low Sodium', value: 'lowSodium' }, 
-        { label: 'Low Price', value: 'lowPrice' },
-        { label: 'Low Calorie', value: 'lowCalorie'}
+        { label: "high protein˚.🎀༘⋆", value: 'highProtein' },
+        { label: 'low fat˚.🎀༘⋆', value: 'lowFat' },
+        { label: 'low carb˚.🎀༘⋆', value: 'lowCarb' },
+        { label: 'high fat˚.🎀༘⋆', value: 'highFat' },
+        { label: 'high fiber˚.🎀༘⋆', value: 'highFiber' },
+        { label: 'low sodium˚.🎀༘⋆', value: 'lowSodium' }, 
+        { label: 'low price˚.🎀༘⋆', value: 'lowPrice' },
+        { label: 'low calorie˚.🎀༘⋆', value: 'lowCalorie'}
 
     ];
 
@@ -91,7 +91,7 @@
         <select bind:value={selectedRestaurant}>
             <option value="">all restaurants</option>
             {#each Array.from(new Set(items.map(i => i.restaurant_name))) as name}
-                <option value={name}>{name}</option>
+                <option value={name}>{name.toLowerCase()}</option>
             {/each}
         </select>
     </div>
@@ -100,7 +100,7 @@
         <h3>dietary goals⋆. 𐙚 ̊</h3>
 
         <button on:click={clearFilters} class="clear-button">
-            Clear Filters
+            clear filters⋆.˚
         </button>
 
         {#each goalOptions as goal}
@@ -118,13 +118,13 @@
      <section class="item-grid">
         {#each filteredItems as item, i}
         <a href={`/explore/${item.id}`} class="item-card" rel="prefetch">
-            <h2>{item.item_name}</h2>
-            <p><strong>,atch:</strong>
+            <h2>{item.item_name.toLowerCase()}</h2>
+            <p><strong>match:</strong>
                 {#if i === 0}☆best match
                 {:else if i < 5}❀great option
                 {:else}｡𖦹°‧consider this{/if}
             </p>
-            <p>restaurant: {item.restaurant_name}</p>
+            <p>restaurant: {item.restaurant_name.toLowerCase()}</p>
             <p>calories: {item.calories}</p>
             <p>protein: {item.protein} grams</p>
             <p>fats: {item.fats} grams</p>

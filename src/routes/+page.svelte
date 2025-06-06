@@ -14,7 +14,7 @@
 <style>
     :global(body) {
         margin: 0;
-        font-family: 'Ahsing';
+        font-family: 'Roxborough-CF';
         background-color: #F4D5D2;
         color: #965F63;
     }
@@ -34,8 +34,21 @@
         margin-bottom: 2rem;
     }
     .features li {
-        margin: 0.75rem;
-        font-size: 1.05rem;
+        padding-left: 1.25rem;
+        text-align: left;
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+        position: relative;
+
+    }
+    .features ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .features li::before {
+        position: absolute;
+        left: 0;
     }
     
 </style>

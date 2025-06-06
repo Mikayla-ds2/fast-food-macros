@@ -26,7 +26,7 @@
       typeof item.fiber_score !== 'undefined'
     ) ? {
       labels: [
-        "Protein", "Fiber", 'Calories', 'Fats', 'Sodium', 'Cholesterol', 'Price', 'Carbs'
+        "protein", "fiber", 'calories', 'fats', 'sodium', 'cholesterol', 'price', 'carbs'
       ],
       datasets: [
         {
@@ -67,7 +67,7 @@
         {#if radarData && radarData.datasets && radarData.datasets[0]}
           <details>
             <summary>ᥫ᭡view nutrition radar chart꩜</summary>
-            <Radarchart {radarData} title={`Nutrition Profile for ${item.item_name}`} />
+            <Radarchart {radarData} title={`nutrition profile for ${item.item_name.toLowerCase()}`} />
           </details>
         {:else}
           <p>Chart data not ready. RadarData: {JSON.stringify(radarData)}</p>
@@ -79,8 +79,8 @@
           <div class="item-grid">
             {#each similarItems as sim}
             <a href={`/explore/${sim.id}`} class="item-card" rel="prefetch">
-              <h3>{sim.item_name}</h3>
-              <p>from {sim.restaurant_name}</p>
+              <h3>{sim.item_name.toLowerCase()}</h3>
+              <p>from {sim.restaurant_name.toLowerCase()}</p>
               <p>similarity: {(sim.similarity * 100).toFixed(2)}%</p>
             </a>
           {/each}

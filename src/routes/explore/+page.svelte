@@ -75,21 +75,21 @@
 </script>
 
 <main class="explore">
-    <h1> Explore Food Items</h1>
-    <p class="description"> Dive into your favorite fast food items and explore their nutrition profiles.</p>   
+    <h1>explore food items-`♡´-</h1>
+    <p class="description">dive into ur favorite fast food items and explore their nutrition profilesꨄ︎</p>   
 
     <div class="filters">
         <select bind:value={selectedType}>
-            <option value="">All Types</option>
-            <option value="Breakfast">Breakfast</option>
-            <option value="Desert">Desert</option>
-            <option value="Drink">Drink</option>
-            <option value="Entree">Entree</option>
-            <option value="Side">Side</option>
+            <option value="">all types</option>
+            <option value="Breakfast">breakfast</option>
+            <option value="Desert">desert</option>
+            <option value="Drink">drink</option>
+            <option value="Entree">entrée</option>
+            <option value="Side">side</option>
         </select>
 
         <select bind:value={selectedRestaurant}>
-            <option value="">All Restaurants</option>
+            <option value="">all restaurants</option>
             {#each Array.from(new Set(items.map(i => i.restaurant_name))) as name}
                 <option value={name}>{name}</option>
             {/each}
@@ -97,7 +97,7 @@
     </div>
 
     <div class="goal-filters">
-        <h3>Dietary Goals</h3>
+        <h3>dietary goals⋆. 𐙚 ̊</h3>
 
         <button on:click={clearFilters} class="clear-button">
             Clear Filters
@@ -119,26 +119,26 @@
         {#each filteredItems as item, i}
         <a href={`/explore/${item.id}`} class="item-card" rel="prefetch">
             <h2>{item.item_name}</h2>
-            <p><strong>Match:</strong>
-                {#if i === 0}⭐️ Best Match
-                {:else if i < 5}💪🏾 Great Option
-                {:else}👀 Consider This{/if}
+            <p><strong>,atch:</strong>
+                {#if i === 0}☆best match
+                {:else if i < 5}❀great option
+                {:else}｡𖦹°‧consider this{/if}
             </p>
-            <p>Restaurant: {item.restaurant_name}</p>
-            <p>Calories: {item.calories}</p>
-            <p>Protein: {item.protein} grams</p>
-            <p>Fats: {item.fats} grams</p>
-            <p>Sodium: {item.sodium} milligrams</p>
-            <p>Sugars: {item.sugars} grams</p>
-            <p>Cholesterol: {item.cholesterol} milligrams</p>
-            <p>Price: {item.price} dollars</p>
-            <p>Carbs: {item.carbs} grams</p>
-            <p>Fiber: {item.fiber} grams</p>
+            <p>restaurant: {item.restaurant_name}</p>
+            <p>calories: {item.calories}</p>
+            <p>protein: {item.protein} grams</p>
+            <p>fats: {item.fats} grams</p>
+            <p>sodium: {item.sodium} milligrams</p>
+            <p>sugars: {item.sugars} grams</p>
+            <p>cholesterol: {item.cholesterol} milligrams</p>
+            <p>price: {item.price} dollars</p>
+            <p>carbs: {item.carbs} grams</p>
+            <p>fiber: {item.fiber} grams</p>
         </a>
         {/each}
      </section>
      {:else}
-        <p class="no-results">No results match your filters. Try adjusting your search.</p>
+        <p class="no-results">no results match your filters ╰┈➤ try adjusting your search</p>
     {/if}
 </main>
 

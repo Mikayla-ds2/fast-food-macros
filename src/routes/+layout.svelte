@@ -1,12 +1,9 @@
-<script>
-    // add logo/icons here
-</script>
 
 <nav class="navbar">
-    <a href="/">Home</a>
-    <a href="/explore">Explore</a>
-    <a href="/meal-planner">Meal Planner</a>
-    <a href="/about">About</a>
+    <a href="/">「 ✦ home ✦ 」</a>
+    <a href="/explore">「 ✦ explore ✦ 」</a>
+    <a href="/meal-planner">「 ✦ explore ✦ 」</a>
+    <a href="/about">「 ✦ about ✦ 」</a>
 </nav>
 
 <slot />

@@ -52,21 +52,21 @@
     <main class="item-detail">
       {#if item}
         <h1>{item.item_name}</h1>
-        <p><strong>Restaurant:</strong> {item.restaurant_name}</p>
-        <p><strong>Calories:</strong> {item.calories}</p>
-        <p><strong>Protein:</strong> {item.protein} grams</p>
-        <p><strong>Fats:</strong> {item.fats} grams</p>
-        <p><strong>Sodium:</strong> {item.sodium} milligrams</p>
-        <p><strong>Sugars:</strong> {item.sugars} grams</p>
-        <p><strong>Cholesterol:</strong> {item.cholesterol} milligrams</p>
-        <p><strong>Price:</strong> {item.price} dollars</p>
-        <p><strong>Carbs: </strong> {item.carbs} grams</p>
-        <p><strong>Fiber:</strong> {item.fiber} grams</p>
+        <p><strong>restaurant:</strong> {item.restaurant_name}</p>
+        <p><strong>calories:</strong> {item.calories}</p>
+        <p><strong>protein:</strong> {item.protein} grams</p>
+        <p><strong>fats:</strong> {item.fats} grams</p>
+        <p><strong>sodium:</strong> {item.sodium} milligrams</p>
+        <p><strong>sugars:</strong> {item.sugars} grams</p>
+        <p><strong>cholesterol:</strong> {item.cholesterol} milligrams</p>
+        <p><strong>price:</strong> {item.price} dollars</p>
+        <p><strong>carbs: </strong> {item.carbs} grams</p>
+        <p><strong>fiber:</strong> {item.fiber} grams</p>
         
         <!-- Only render chart if radarData exists and is valid -->
         {#if radarData && radarData.datasets && radarData.datasets[0]}
           <details>
-            <summary>View Nutrition Radar Chart</summary>
+            <summary>ᥫ᭡view nutrition radar chart꩜</summary>
             <Radarchart {radarData} title={`Nutrition Profile for ${item.item_name}`} />
           </details>
         {:else}
@@ -75,20 +75,20 @@
 
         {#if similarItems.length}
         <section class="similar-items">
-          <h2>See Similar Items</h2>
+          <h2>see similar items‹𝟹</h2>
           <div class="item-grid">
             {#each similarItems as sim}
             <a href={`/explore/${sim.id}`} class="item-card" rel="prefetch">
               <h3>{sim.item_name}</h3>
-              <p>From {sim.restaurant_name}</p>
-              <p>Similarity: {(sim.similarity * 100).toFixed(2)}%</p>
+              <p>from {sim.restaurant_name}</p>
+              <p>similarity: {(sim.similarity * 100).toFixed(2)}%</p>
             </a>
           {/each}
         </div>
       </section>
     {/if}
         
-        <a href="/explore" class='back-link'>← Back to Explore</a>
+        <a href="/explore" class='back-link'>← back to explore⟢</a>
       {:else}
         <p>Loading item...</p>
       {/if}

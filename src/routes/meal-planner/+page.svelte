@@ -26,36 +26,36 @@
 </script>
 
 <main class="planner">
-    <h1> 🍔 Build Your Meal</h1>
+    <h1> 🍔 build ur meal</h1>
 
     <div class="planner-section">
-        <h2>Entree</h2>
+        <h2>౨ৎentrée</h2>
         <select bind:value={selectedEntree}>
-            <option value={null}>Select an Entree</option>
+            <option value={null}>select an entrée✿ʚɞ</option>
             {#each entreeItems as item}
                 <option value={item}>{item.item_name}</option>
             {/each}
         </select>
 
-        <h2>Side</h2>
+        <h2>౨ৎside</h2>
         <select bind:value={selectedSide}>
-            <option value={null}>Select a Side</option>
+            <option value={null}>select a side✿ʚɞ</option>
             {#each sideItems as item}
                 <option value={item}>{item.item_name}</option>
             {/each}
         </select>
 
-        <h2>Drink</h2>
+        <h2>౨ৎdrink</h2>
         <select bind:value={selectedDrink}>
-            <option value={null}>Select a Side</option>
+            <option value={null}>select a drink✿ʚɞ</option>
             {#each drinkItems as item}
                 <option value={item}>{item.item_name}</option>
             {/each}
         </select>
 
-        <h2>Desert</h2>
+        <h2>౨ৎdesert</h2>
         <select bind:value={selectedDesert}>
-            <option value={null}>Selct a Desert</option>
+            <option value={null}>selct a desert✿ʚɞ</option>
             {#each desertItems as item}
                 <option value={item}>{item.item_name}</option>
             {/each}
@@ -63,16 +63,16 @@
     </div>
 
     <div class="summary">
-        <h2>Total Nutrition</h2>
-        <p><strong>Calories:</strong> {totalNutrition.calories}</p>
-        <p><strong>Protein:</strong> {totalNutrition.protein} grams</p>
-        <p><strong>Carbs:</strong> {totalNutrition.carbs} grams</p>
-        <p><strong>Fiber:</strong> {totalNutrition.fiber} grams</p>
-        <p><strong>Cholesterol:</strong> {totalNutrition.cholesterol} milligrams</p>
-        <p><strong>Sodium:</strong> {totalNutrition.sodium} milligrams</p>
-        <p><strong>Sugars:</strong> {totalNutrition.sugars} grams</p>
-        <p><strong>Total Price:</strong> ${totalNutrition.price.toFixed(2)} dollars</p>
-        <p><strong>Fats:</strong> {totalNutrition.fats} grams</p>
+        <h2>total nutrition</h2>
+        <p><strong>calories:</strong> {totalNutrition.calories}</p>
+        <p><strong>protein:</strong> {totalNutrition.protein} grams</p>
+        <p><strong>carbs:</strong> {totalNutrition.carbs} grams</p>
+        <p><strong>fiber:</strong> {totalNutrition.fiber} grams</p>
+        <p><strong>cholesterol:</strong> {totalNutrition.cholesterol} milligrams</p>
+        <p><strong>sodium:</strong> {totalNutrition.sodium} milligrams</p>
+        <p><strong>sugars:</strong> {totalNutrition.sugars} grams</p>
+        <p><strong>total price:</strong> ${totalNutrition.price.toFixed(2)} dollars</p>
+        <p><strong>fats:</strong> {totalNutrition.fats} grams</p>
     </div>
 </main>
 

@@ -1,15 +1,12 @@
-<script>
-    // No JS logic for now-just structure
-    </script>
 <main class="home">
-    <h1> Fast Food Macro Explorer</h1>
-    <p class="tagline">Explore fast food nutritional information and find items that fit your nutritional goals.</p>
+    <h1>⋆˚࿔ fast food macro explorer 𝜗𝜚˚⋆</h1>
+    <p class="tagline">explore fast food nutritional information and find items that fit your nutritional goals ୨ৎ</p>
 
     <section class="features">
         <ul>
-            <li> Compare items by protein, sugar, sodium & more.</li>
-            <li> Visualize foods with radar charts & scatter plots.</li>
-            <li> Match meals to your health goals.</li>
+            <li>❤︎ compare items by protein, sugar, sodium & more</li>
+            <li>❤︎ visualize foods with radar charts & scatter plots</li>
+            <li>❤︎ match meals to your health goals</li>
         </ul> 
     </section>
 
@@ -17,9 +14,9 @@
 <style>
     :global(body) {
         margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background-color: #fdf6f9;
-        color: #2c2c2c;
+        font-family: 'Ahsing';
+        background-color: #F4D5D2;
+        color: #965F63;
     }
     .home {
         text-align: center;

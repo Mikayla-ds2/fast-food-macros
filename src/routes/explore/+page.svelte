@@ -84,7 +84,7 @@
             <option value="Breakfast">breakfast</option>
             <option value="Desert">desert</option>
             <option value="Drink">drink</option>
-            <option value="Entree">entrée</option>
+            <option value="Entrée">entrée</option>
             <option value="Side">side</option>
         </select>
 

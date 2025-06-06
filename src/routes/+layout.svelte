@@ -9,6 +9,27 @@
 <slot />
 
 <style>
+    @font-face {
+        font-family: 'Roxborough CF';
+        src: url('/src/lib/fonts/roxborough-cf.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Telegraf';
+        src: url(/src/lib/fonts/telegraf-regular.ttf) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    :root {
+        --font-heading: 'Roxborough CF', sans-serif;
+        --font-body: 'Telegraf', serif;
+    }
+
+    nav a {
+        font-family: var(--font-heading);
+    }
     .navbar {
         display: flex;
         justify-content: center;

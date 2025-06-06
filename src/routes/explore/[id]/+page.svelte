@@ -51,8 +51,8 @@
     </script>    
     <main class="item-detail">
       {#if item}
-        <h1>{item.item_name}</h1>
-        <p><strong>restaurant:</strong> {item.restaurant_name}</p>
+        <h1>{item.item_name.toLowerCase()}</h1>
+        <p><strong>restaurant:</strong> {item.restaurant_name.toLowerCase()}</p>
         <p><strong>calories:</strong> {item.calories}</p>
         <p><strong>protein:</strong> {item.protein} grams</p>
         <p><strong>fats:</strong> {item.fats} grams</p>
@@ -87,7 +87,7 @@
         </div>
       </section>
     {/if}
-        
+
         <a href="/explore" class='back-link'>← back to explore⟢</a>
       {:else}
         <p>Loading item...</p>
@@ -142,4 +142,5 @@
       color: inherit;
       box-shadow: 0 1px 6px rgba(0,0,0,0.1);
     }
+
     </style>

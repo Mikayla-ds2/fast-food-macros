@@ -1,4 +1,5 @@
 # Fast Food Macros Project
+this has 2 other repos with hours. Repo names: fast-food-macros-1 and svelte@latest
 
 This is a comprehensive fast food nutrition analysis and visualization tool.
 

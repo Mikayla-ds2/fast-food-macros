@@ -1,0 +1,50 @@
+,Restaurant,Item Name,Calories ,Protein (g),Total Fats (g),Sodium (mg),Total Sugars (g),Cholesterol (mg),Price ($),Carbs (g),Fiber (g),Item Type
+0,McDonald's,"Bacon, Egg, and Cheese McGriddle",430,17,21,1230,15,215,5.79,44,2,Breakfast
+1,McDonald's,"Sausage, Egg, and Cheese McGriddle",550,19,33,1290,15,235,5.99,44,2,Breakfast
+2,McDonald's,Quarter Pounder with Cheese,520,30,26,1140,10,95,6.89,42,2,Entrée
+3,McDonald's,Small Fry,230,3,11,190,0,0,3.49,31,3,Side
+4,McDonald's,4 pc. Chicken McNuggets,170,9,10,340,0,25,3.69,10,0,Entrée
+5,McDonald's,McDouble,390,22,20,920,6,70,4.29,32,2,Entrée
+6,McDonald's,McChicken,390,14,21,560,4,40,3.99,38,1,Entrée
+7,McDonald's,Sausage McMuffin,400,14,26,760,2,55,3.19,29,2,Breakfast
+8,McDonald's,Big Mac,580,25,34,1060,7,85,6.59,45,3,Entrée
+9,Chick-fil-A,Spicy Deluxe Sandwich,540,34,26,1880,7,85,8.39,47,2,Entrée
+10,Chick-fil-A,Grilled Chicken Club Sandwich,520,37,22,1055,12,105,11.55,45,3,Entrée
+11,Chick-fil-A,Small Mac & Cheese,270,12,17,710,2,40,4.55,17,2,Side
+12,Chick-fil-A,3 ct. Chick-n-Strips,310,29,14,870,2,75,7.49,16,0,Entrée
+13,Chick-fil-A,Medium Waffle Potato Fries,420,5,24,240,1,0,3.59,45,5,Side
+14,Chick-fil-A,8 ct. Nuggets,250,27,11,1210,1,85,7.15,11,0,Entrée
+15,Chick-fil-A,Chicken Sandwich,420,29,18,1460,6,70,7.09,41,1,Entrée
+16,Chick-fil-A,Cool Wrap,660,43,45,1420,5,110,11.25,32,14,Entrée
+17,Chick-fil-A,Smokehouse BBQ Bacon Sandwich w/ Reg Filet,670,41,31,1930,12,110,10.45,57,3,Entrée
+18,Chick-fil-A,Deluxe Sandwich,490,32,22,1700,7,85,7.99,43,1,Entrée
+19,Starbucks,Small Blonde Vanilla Latte,130,6,3,0,17,15,6.55,18,0,Drink
+20,Starbucks,"Sausage, Cheddar, & Egg Sandwich",480,18,29,890,2,165,5.95,34,1,Breakfast
+21,Starbucks,Tall Mocha Cookie Crumble Frappuccino,350,4,17,200,40,45,6.95,45,2,Drink
+22,Starbucks,"Bacon, Gouda, & Egg Sandwich",360,19,18,720,2,155,6.25,35,1,Breakfast
+23,Starbucks,Tall Strawberry Açaí Lemonade Refresher,80,0,0,10,16,0,5.95,18,1,Drink
+24,Starbucks,Tall Iced Shaken Espresso,80,3,1,45,11,5,5.15,13,0,Drink
+25,Starbucks,Butter Croissant,250,5,14,300,4,45,4.75,26,1,Desert
+26,Starbucks,Birthday Cake Pop,160,2,8,95,16,10,3.25,21,0,Desert
+27,Starbucks,Tall Caffé Mocha,200,7,9,75,18,30,6.15,22,2,Drink
+28,Starbucks,Short Caramel Macchiato,120,5,4,80,15,15,6.15,16,0,Drink
+29,Taco Bell,Cantina Chicken Quesadilla,570,29,32,1340,3,90,7.31,42,4,Entrée
+30,Taco Bell,Crunchwrap Supreme,530,15,20,1220,6,20,7.31,73,6,Entrée
+31,Taco Bell,Beefy 5-Layer Burrito,490,17,18,1290,4,30,5.11,65,7,Entrée
+32,Taco Bell,Nachos BellGrande (Beef),730,17,39,1180,4,20,8.16,80,13,Entrée
+33,Taco Bell,Nacho Cheese Doritos Locos Tacos Supreme,190,8,11,380,1,30,4.62,15,3,Entrée
+34,Taco Bell,Grilled Cheese Burrito,710,25,39,1510,4,75,6.82,64,6,Entrée
+35,Taco Bell,Nacho Fries,330,4,19,770,1,0,3.16,36,4,Side
+36,Taco Bell,Cinnamon Twists,170,1,6,115,10,0,1.82,27,1,Desert
+37,Taco Bell,Mexican Pizza,530,19,28,1010,3,40,7.31,50,8,Entrée
+38,Taco Bell,Cheesy Gordita Crunch,490,20,28,850,4,55,6.33,42,5,Entrée
+39,Zaxbys,Fried White Cheddar Bites,700,27,46,1550,2,75,7.11,46,3,Side
+40,Zaxbys,Chicken Bacon Ranch Loaded Fries,1270,61,78,3070,2,145,12.39,88,8,Side
+41,Zaxbys,Signature Sandwich,600,31,32,2200,8,75,8.7,45,2,Entrée
+42,Zaxbys,Kickin Chicken Sandwich,690,34,39,2760,5,65,10.02,51,2,Entrée
+43,Zaxbys,The Fried Cobb Zalad,780,55,45,2130,5,315,10.55,43,4,Entrée
+44,Zaxbys,Regular Crinkle Fries,330,5,14,580,0,0,3.81,47,5,Side
+45,Zaxbys,The Fried House Zalad,660,44,37,1920,4,90,13.98,42,4,Entrée
+46,Zaxbys,Birthday Cake Milkshake,730,13,19,600,113,60,3.3,129,0,Desert
+47,Zaxbys,Basket of Texas Toast,450,9,21,1020,5,0,3.95,57,3,Side
+48,Zaxbys,5 Chicken Fingerz,420,45,20,2030,0,90,11.34,16,0,Entrée

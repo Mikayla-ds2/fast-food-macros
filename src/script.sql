@@ -56,3 +56,12 @@ where protein >= 20 or
 fats <= 23
 order by item_type asc;
 
+select restaurant, item_name, item_type, protein, price from fastfood
+where protein >= 30 and price <= 10
+order by price desc;
+
+select restaurant, count(restaurant) as restaurantCount from fastfood
+where sugars < 15
+group by restaurant
+order by restaurantCount desc;
+-- trying to see how many times a restaurant is in a specific cluster --

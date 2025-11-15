@@ -119,3 +119,16 @@ where protein > 18 and fats < 21
 select * from fastfood
 where restaurant = 'Taco Bell'
 order by fats asc;
+
+select item_type, avg(sodium) as averageSodium, avg(cholesterol) as averageCholesterol from fastfood
+group by item_type
+order by averageSodium desc;
+
+select restaurant, avg(sodium) as averageSodium from fastfood
+group by restaurant
+order by averageSodium desc
+
+select * from (select *, ROW_NUMBER() 
+over (PARTITION BY restaurant 
+order by sodium desc) as rn from fastfood) ranked
+where rn <= 1;
